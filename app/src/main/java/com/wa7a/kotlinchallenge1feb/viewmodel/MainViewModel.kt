@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.wa7a.kotlinchallenge1feb.data.model.AchievementsResponse
-import com.wa7a.kotlinchallenge1feb.repository.MainRepository
+import com.wa7a.kotlinchallenge1feb.data.repository.MainRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
@@ -18,7 +18,6 @@ class MainViewModel : ViewModel() {
     private fun getAchievements() = viewModelScope.launch {
         repository.getList(_achievements)
     }
-
 
     init {
         getAchievements()

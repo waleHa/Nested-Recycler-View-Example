@@ -1,4 +1,4 @@
-package com.wa7a.kotlinchallenge1feb.network
+package com.wa7a.kotlinchallenge1feb.data.api
 
 import com.wa7a.kotlinchallenge1feb.data.model.AchievementsResponse
 import retrofit2.Response

@@ -3,7 +3,7 @@ package com.wa7a.kotlinchallenge1feb.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Data(
+data class  Data(
     @SerializedName("id")
     val id: Int? = null,
     @SerializedName("label")

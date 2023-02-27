@@ -1,6 +1,5 @@
 package com.wa7a.kotlinchallenge1feb.ui
 
-import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.wa7a.kotlinchallenge1feb.R
@@ -15,15 +14,16 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun setup() {
         binding.lifecycleOwner = this
         setupRecyclerView()
-
+        setupDataBinding( )
     }
 
     private fun setupRecyclerView() {
-
         recyclerView = binding.recyclerViewParent
-
         mainAdapter = ParentAdapter()
         recyclerView.adapter = mainAdapter
+    }
+
+    private fun setupDataBinding() {
         binding.viewModel = viewModel
         viewModel.achievements.observe(this) {
             if (it != null) {
